@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://du6qbgqucaqov"]
 
-[ext_resource type="Texture2D" uid="uid://b6umklllf2jsl" path="res://Textures/dirt_full_new.png" id="1_3v41d"]
+[ext_resource type="Texture2D" uid="uid://bxmkkqpr2xwed" path="res://Textures/ground/grass.png" id="1_oe8m4"]
 [ext_resource type="PackedScene" uid="uid://dncgepmkc4jf4" path="res://Player/player.tscn" id="2_40uwv"]
 [ext_resource type="PackedScene" uid="uid://ba2claihwes2y" path="res://Utility/enemy_spawner.tscn" id="3_p01g4"]
 [ext_resource type="PackedScene" uid="uid://gvm5jcbbgwdv" path="res://Enemy/enemy_kobold_weak.tscn" id="4_ee8bm"]
@@ -87,9 +87,11 @@ enemy_spawn_delay = 0
 [node name="Background" type="Sprite2D" parent="."]
 texture_filter = 2
 texture_repeat = 2
-texture = ExtResource("1_3v41d")
+position = Vector2(-6.49998, -5.49998)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_oe8m4")
 region_enabled = true
-region_rect = Rect2(-4000, -4000, 4000, 4000)
+region_rect = Rect2(40000, 40000, 40000, 40000)
 
 [node name="Player" parent="." instance=ExtResource("2_40uwv")]
 

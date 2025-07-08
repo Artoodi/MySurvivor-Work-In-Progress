@@ -36,62 +36,6 @@ const UPGRADES = {
 		"prerequisite": ["icespear3"],
 		"type": "weapon"
 	},
-	"amulet1": {
-		"icon": WEAPON_PATH + "amulet.png",
-		"displayname": "Amulet(WIP)",
-		"details": "A magic amulet orbits around you, damaging enemies it touches",
-		"level": "Level: 1",
-		"prerequisite": [],
-		"type": "weapon"
-	},
-	"amulet2": {
-		"icon": WEAPON_PATH + "amulet.png",
-		"displayname": "Amulet(WIP)",
-		"details": "An additional amulet orbits you",
-		"level": "Level: 2",
-		"prerequisite": ["amulet1"],
-		"type": "weapon"
-	},
-	"amulet3": {
-		"icon": WEAPON_PATH + "amulet.png",
-		"displayname": "Amulet(WIP)",
-		"details": "The amulet deals more damage and spins faster",
-		"level": "Level: 3",
-		"prerequisite": ["amulet2"],
-		"type": "weapon"
-	},
-	"amulet4": {
-		"icon": WEAPON_PATH + "amulet.png",
-		"displayname": "Amulet(WIP)",
-		"details": "Another amulet orbits you and they are larger",
-		"level": "Level: 4",
-		"prerequisite": ["amulet3"],
-		"type": "weapon"
-	},
-	"develeye1":{
-		"icon": WEAPON_PATH + "devil_eye.png",
-		"displayname": "Devil Eye(WIP)",
-		"details": "Creates a demon eye that periodically projects dark power.",
-		"level": "Level: 1",
-		"prerequisite": [],
-		"type": "weapon"
-	},
-	"develeye2":{
-		"icon": WEAPON_PATH + "devil_eye.png",
-		"displayname": "Devil Eye(WIP)",
-		"details": "Cools down faster and deals more damage.",
-		"level": "Level: 2",
-		"prerequisite": ["develeye1"],
-		"type": "weapon"
-	},
-	"develeye3":{
-		"icon": WEAPON_PATH + "devil_eye.png",
-		"displayname": "Devil Eye(WIP)",
-		"details": "More dark projectiles of varying powers",
-		"level": "Level: 3",
-		"prerequisite": ["develeye2"],
-		"type": "weapon"
-	},
 	"javelin1": {
 		"icon": WEAPON_PATH + "javelin_3_new_attack.png",
 		"displayname": "Javelin",

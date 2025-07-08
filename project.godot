@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="My Survivor"
+config/version="0.01"
 run/main_scene="res://TitleScreen/menu.tscn"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+config/icon="uid://jpxxx4vea6fa"
 
 [autoload]
 
@@ -73,3 +74,4 @@ level_up_debug={
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

@@ -21,6 +21,11 @@ texture = ExtResource("1_7stu1")
 position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_dd51k")
 
+[node name="FlipTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+ignore_time_scale = true
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 20.0
 autostart = true
@@ -29,4 +34,5 @@ autostart = true
 stream = ExtResource("3_ihvf8")
 autoplay = true
 
+[connection signal="timeout" from="FlipTimer" to="." method="_on_flip_timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

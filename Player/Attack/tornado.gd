@@ -15,6 +15,7 @@ var angle_more = Vector2.ZERO
 signal remove_from_array(object)
 
 @onready var player = get_tree().get_first_node_in_group("player")
+@onready var flip_timer = $FlipTimer
 
 func _ready():
 	match level:
@@ -86,6 +87,8 @@ func _ready():
 		tween.tween_property(self,"angle", angle_less,2)
 		tween.tween_property(self,"angle", angle_more,2)
 	tween.play()
+	flip_timer.timeout.connect(_on_flip_timer_timeout)
+	flip_timer.start()
 
 func _physics_process(delta):
 	position += angle*speed*delta
@@ -93,3 +96,6 @@ func _physics_process(delta):
 func _on_timer_timeout():
 	emit_signal("remove_from_array",self)
 	queue_free()
+
+func _on_flip_timer_timeout():
+	scale.x *= -1

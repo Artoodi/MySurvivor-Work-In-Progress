@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcyka5e06knff"]
+[gd_scene load_steps=13 format=3 uid="uid://dcyka5e06knff"]
 
 [ext_resource type="Script" uid="uid://n7ksixhodsid" path="res://TitleScreen/menu.gd" id="1_oi0p3"]
 [ext_resource type="FontFile" uid="uid://cb4e8g30xxp5u" path="res://Font/tenderness.otf" id="1_xdjxl"]
@@ -8,11 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://c5y0r4crcqjdp" path="res://Textures/Items/Weapons/tornado.png" id="6_6q26e"]
 [ext_resource type="Texture2D" uid="uid://f3cn25ccer2i" path="res://Textures/Items/Weapons/amulet.png" id="7_3iml8"]
 [ext_resource type="Texture2D" uid="uid://btklqfi1n5tyt" path="res://Textures/Items/Weapons/devil_eye.png" id="8_fmhqy"]
-[ext_resource type="Texture2D" uid="uid://cueti287suhm3" path="res://Textures/Items/Upgrades/boots_4_green.png" id="9_vr0tc"]
-[ext_resource type="Texture2D" uid="uid://bqh0rtd4hlevw" path="res://Textures/Items/Upgrades/helmet_1.png" id="10_4odsf"]
-[ext_resource type="Texture2D" uid="uid://dyyuy0xetmkns" path="res://Textures/Items/Upgrades/scroll_old.png" id="11_x6sv2"]
-[ext_resource type="Texture2D" uid="uid://bq25l3xf3kwrc" path="res://Textures/Items/Upgrades/thick_new.png" id="12_whv8h"]
-[ext_resource type="Texture2D" uid="uid://ct5qpuugip20e" path="res://Textures/Items/Upgrades/urand_mage.png" id="13_aejw1"]
+[ext_resource type="Texture2D" uid="uid://yugqg4cbsprx" path="res://Textures/Items/Weapons/fire_stick.png" id="9_ujvb3"]
+[ext_resource type="Texture2D" uid="uid://bu2son8g2konp" path="res://Textures/Items/Weapons/sword.png" id="10_mqclt"]
+[ext_resource type="Texture2D" uid="uid://bp3mrh4ikgdci" path="res://Textures/Items/Weapons/Hammer_one.png" id="11_3iml8"]
+[ext_resource type="Texture2D" uid="uid://bgbobj7ejy8tr" path="res://Textures/Items/Weapons/devil_stick.png" id="12_mqclt"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -30,20 +29,25 @@ offset_bottom = 382.0
 color = Color(0.395457, 0.454173, 0.291202, 1)
 
 [node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
 offset_left = 15.0
 offset_top = 175.0
 offset_right = 151.0
 offset_bottom = 198.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.764706, 0, 0, 0.584314)
 theme_override_fonts/font = ExtResource("1_xdjxl")
 text = "Playble Weapons:"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 640.0
-offset_bottom = 100.0
+offset_left = -2.0
+offset_top = 6.0
+offset_right = 638.0
+offset_bottom = 106.0
 theme_override_fonts/font = ExtResource("1_xdjxl")
 theme_override_font_sizes/font_size = 62
-text = "My own Survivor -Test"
+text = "My own Survivor"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -65,12 +69,15 @@ text = "Exit"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 268.0
-offset_right = 152.0
-offset_bottom = 291.0
+offset_left = 18.0
+offset_top = 232.0
+offset_right = 154.0
+offset_bottom = 269.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.984314, 0, 0, 0.447059)
 theme_override_fonts/font = ExtResource("1_xdjxl")
-text = "Playble Powers:"
+text = "WIP Weapons:
+"
 
 [node name="IceSpear" type="Sprite2D" parent="."]
 position = Vector2(31, 217)
@@ -85,32 +92,39 @@ position = Vector2(121, 216)
 texture = ExtResource("6_6q26e")
 
 [node name="Amulet" type="Sprite2D" parent="."]
-position = Vector2(55, 254)
+position = Vector2(28, 264)
 texture = ExtResource("7_3iml8")
 
 [node name="DevilEye" type="Sprite2D" parent="."]
-position = Vector2(99, 254)
+position = Vector2(63, 265)
 texture = ExtResource("8_fmhqy")
 
-[node name="Boots4Green" type="Sprite2D" parent="."]
-position = Vector2(32, 304)
-texture = ExtResource("9_vr0tc")
+[node name="FireStick" type="Sprite2D" parent="."]
+position = Vector2(95, 264)
+texture = ExtResource("9_ujvb3")
 
-[node name="Helmet1" type="Sprite2D" parent="."]
-position = Vector2(72, 304)
-texture = ExtResource("10_4odsf")
+[node name="Sword" type="Sprite2D" parent="."]
+position = Vector2(129, 266)
+texture = ExtResource("10_mqclt")
 
-[node name="ScrollOld" type="Sprite2D" parent="."]
-position = Vector2(121, 308)
-texture = ExtResource("11_x6sv2")
+[node name="HammerOne" type="Sprite2D" parent="."]
+position = Vector2(28, 295)
+texture = ExtResource("11_3iml8")
 
-[node name="ThickNew" type="Sprite2D" parent="."]
-position = Vector2(47, 342)
-texture = ExtResource("12_whv8h")
+[node name="Icon64" type="Sprite2D" parent="."]
+position = Vector2(63, 293)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_mqclt")
 
-[node name="UrandMage" type="Sprite2D" parent="."]
-position = Vector2(92, 340)
-texture = ExtResource("13_aejw1")
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 291.0
+offset_right = 162.0
+offset_bottom = 314.0
+theme_override_fonts/font = ExtResource("1_xdjxl")
+theme_override_font_sizes/font_size = 12
+text = "and more..."
 
 [connection signal="click_end" from="btn_play" to="." method="_on_btn_play_click_end"]
 [connection signal="click_end" from="btn_exit" to="." method="_on_btn_exit_click_end"]
