@@ -100,6 +100,38 @@ const UPGRADES = {
 		"prerequisite": ["tornado3"],
 		"type": "weapon"
 	},
+		"devil_eye1": {
+		"icon": WEAPON_PATH + "devil_eye.png",
+		"displayname": "Devil Eye",
+		"details": "A demonic eye that o`rbits around you, firing three different projectiles at enemies, devil eye only effected by cooldown",
+		"level": "Level: 1",
+		"prerequisite": [],
+		"type": "weapon"
+	},
+	"devil_eye2": {
+		"icon": WEAPON_PATH + "devil_eye.png",
+		"displayname": "Devil Eye",
+		"details": "Faster attack speed and improved projectile damage",
+		"level": "Level: 2",
+		"prerequisite": ["devil_eye1"],
+		"type": "weapon"
+	},
+	"devil_eye3": {
+		"icon": WEAPON_PATH + "devil_eye.png",
+		"displayname": "Devil Eye",
+		"details": "Increased orbit radius and speed, faster attacks",
+		"level": "Level: 3",
+		"prerequisite": ["devil_eye2"],
+		"type": "weapon"
+	},
+	"devil_eye4": {
+		"icon": WEAPON_PATH + "devil_eye.png",
+		"displayname": "Devil Eye",
+		"details": "Maximum power: fastest attacks, larger orbit, and devastating projectiles",
+		"level": "Level: 4",
+		"prerequisite": ["devil_eye3"],
+		"type": "weapon"
+	},
 	"armor1": {
 		"icon": ICON_PATH + "helmet_1.png",
 		"displayname": "Armor",

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2305jo2gw0dp"]
+
+[ext_resource type="Script" uid="uid://dpl4ywori1t21" path="res://Player/Attack/devil_eye_projectile_2.gd" id="1_te41t"]
+[ext_resource type="Texture2D" uid="uid://b7lt6nwnx560i" path="res://Textures/Items/Weapons/devil_eye_projectile/devil_eye_projectile_2.png" id="2_87s8k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v16ti"]
+
+[node name="DevilEyeProjectile2" type="Area2D" groups=["attack"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_te41t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_87s8k")
+
+[node name="Timer" type="Timer" parent="." groups=["attack"]]
+wait_time = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.6, 0.6)
+shape = SubResource("CircleShape2D_v16ti")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -15,7 +15,8 @@ var collected_experience = 0
 var iceSpear = preload("res://Player/Attack/ice_spear.tscn")
 var tornado = preload("res://Player/Attack/tornado.tscn")
 var javelin = preload("res://Player/Attack/javelin.tscn")
-var amulet = preload("res://Player/Attack/amulet.tscn")
+var devil_eye = preload("res://Player/Attack/devil_eye.tscn")
+
 
 
 #AttackNodes
@@ -24,6 +25,7 @@ var amulet = preload("res://Player/Attack/amulet.tscn")
 @onready var tornadoTimer = get_node("%TornadoTimer")
 @onready var tornadoAttackTimer = get_node("%TornadoAttackTimer")
 @onready var javelinBase = get_node("%JavelinBase")
+@onready var devilEyeBase = get_node("%DevilEyeBase")
 
 #UPGRADES
 var collected_upgrades = []
@@ -50,8 +52,8 @@ var tornado_level = 0
 var javelin_ammo = 0
 var javelin_level = 0
 
-#Amulet
-
+#DevilEye
+var devil_eye_level = 0
 
 #Enemy Related
 var enemy_close = []
@@ -122,6 +124,8 @@ func attack():
 			tornadoTimer.start()
 	if javelin_level > 0:
 		spawn_javelin()
+	if devil_eye_level > 0:
+		spawn_devil_eye()
 
 func _on_hurt_box_hurt(damage, _angle, _knockback):
 	hp -= clamp(damage-armor, 1.0, 999.0)
@@ -178,6 +182,18 @@ func spawn_javelin():
 	for i in get_javelins:
 		if i.has_method("update_javelin"):
 			i.update_javelin()
+			
+func spawn_devil_eye():
+	var get_devil_eye_total = devilEyeBase.get_child_count()
+	if get_devil_eye_total == 0 and devil_eye_level > 0:
+		var devil_eye_spawn = devil_eye.instantiate()
+		devil_eye_spawn.global_position = global_position
+		devilEyeBase.add_child(devil_eye_spawn)
+	#Update DevilEye
+	var get_devil_eyes = devilEyeBase.get_children()
+	for i in get_devil_eyes:
+		if i.has_method("update_devil_eye"):
+			i.update_devil_eye()
 			
 
 func get_random_target():
@@ -285,6 +301,14 @@ func upgrade_character(upgrade):
 			javelin_level = 3
 		"javelin4":
 			javelin_level = 4
+		"devil_eye1":
+			devil_eye_level = 1
+		"devil_eye2":
+			devil_eye_level = 2
+		"devil_eye3":
+			devil_eye_level = 3
+		"devil_eye4":
+			devil_eye_level = 4
 		"armor1","armor2","armor3","armor4":
 			armor += 1
 		"speed1","speed2","speed3","speed4":
@@ -368,7 +392,7 @@ func death():
 	var tween = deathPanel.create_tween()
 	tween.tween_property(deathPanel,"position",Vector2(220,50),3.0).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 	tween.play()
-	if time >= 300:
+	if time >= 500:
 		lblResult.text = "You Win"
 		sndVictory.play()
 	else:

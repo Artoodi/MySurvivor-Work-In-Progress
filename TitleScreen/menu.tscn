@@ -84,11 +84,11 @@ position = Vector2(31, 217)
 texture = ExtResource("4_0eg15")
 
 [node name="Javelin3New" type="Sprite2D" parent="."]
-position = Vector2(72, 215)
+position = Vector2(53, 216)
 texture = ExtResource("5_dsl36")
 
 [node name="Tornado" type="Sprite2D" parent="."]
-position = Vector2(121, 216)
+position = Vector2(79, 214)
 texture = ExtResource("6_6q26e")
 
 [node name="Amulet" type="Sprite2D" parent="."]
@@ -96,15 +96,15 @@ position = Vector2(28, 264)
 texture = ExtResource("7_3iml8")
 
 [node name="DevilEye" type="Sprite2D" parent="."]
-position = Vector2(63, 265)
+position = Vector2(106, 215)
 texture = ExtResource("8_fmhqy")
 
 [node name="FireStick" type="Sprite2D" parent="."]
-position = Vector2(95, 264)
+position = Vector2(65, 264)
 texture = ExtResource("9_ujvb3")
 
 [node name="Sword" type="Sprite2D" parent="."]
-position = Vector2(129, 266)
+position = Vector2(99, 266)
 texture = ExtResource("10_mqclt")
 
 [node name="HammerOne" type="Sprite2D" parent="."]

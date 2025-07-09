@@ -76,6 +76,9 @@ wait_time = 0.2
 [node name="JavelinBase" type="Node2D" parent="Attack"]
 unique_name_in_owner = true
 
+[node name="DevilEyeBase" type="Node2D" parent="Attack"]
+unique_name_in_owner = true
+
 [node name="EnemyDetectionArea" type="Area2D" parent="."]
 visible = false
 collision_layer = 4
