@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://du6qbgqucaqov"]
 
-[ext_resource type="Texture2D" uid="uid://bxmkkqpr2xwed" path="res://Textures/ground/grass.png" id="1_oe8m4"]
+[ext_resource type="Texture2D" uid="uid://dcwwx5ed3urno" path="res://Textures/ground/obsidian.png" id="1_oe8m4"]
 [ext_resource type="PackedScene" uid="uid://dncgepmkc4jf4" path="res://Player/player.tscn" id="2_40uwv"]
 [ext_resource type="PackedScene" uid="uid://ba2claihwes2y" path="res://Utility/enemy_spawner.tscn" id="3_p01g4"]
 [ext_resource type="PackedScene" uid="uid://gvm5jcbbgwdv" path="res://Enemy/enemy_kobold_weak.tscn" id="4_ee8bm"]
