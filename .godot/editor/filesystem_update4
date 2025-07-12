@@ -24,3 +24,5 @@ res://Utility/upgrade_db.gd
 res://Player/Attack/devil_eye_projectile_1.gd
 res://Player/Attack/devil_eye_projectile_2.gd
 res://Player/Attack/devil_eye_projectile_3.gd
+res://Player/Attack/fire_ball.gd
+res://Player/Attack/fire_ball.tscn

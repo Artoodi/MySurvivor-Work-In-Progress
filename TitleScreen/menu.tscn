@@ -30,7 +30,7 @@ offset_bottom = 382.0
 color = Color(0.395457, 0.454173, 0.291202, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(319, 179)
+position = Vector2(323, 181)
 scale = Vector2(0.420573, 0.359375)
 texture = ExtResource("2_3iml8")
 
@@ -75,10 +75,10 @@ text = "Exit"
 
 [node name="Label2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 232.0
-offset_right = 154.0
-offset_bottom = 269.0
+offset_left = 16.0
+offset_top = 264.0
+offset_right = 152.0
+offset_bottom = 301.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0.984314, 0, 0, 0.447059)
 theme_override_fonts/font = ExtResource("1_xdjxl")
@@ -90,31 +90,32 @@ position = Vector2(31, 217)
 texture = ExtResource("4_0eg15")
 
 [node name="Javelin3New" type="Sprite2D" parent="."]
-position = Vector2(53, 216)
+position = Vector2(68, 217)
 texture = ExtResource("5_dsl36")
 
 [node name="Tornado" type="Sprite2D" parent="."]
-position = Vector2(79, 214)
+position = Vector2(101, 214)
 texture = ExtResource("6_6q26e")
 
 [node name="Amulet" type="Sprite2D" parent="."]
-position = Vector2(28, 264)
+position = Vector2(29, 296)
 texture = ExtResource("7_3iml8")
 
 [node name="DevilEye" type="Sprite2D" parent="."]
-position = Vector2(106, 215)
+position = Vector2(72, 247)
 texture = ExtResource("8_fmhqy")
 
 [node name="FireStick" type="Sprite2D" parent="."]
-position = Vector2(65, 264)
+position = Vector2(34, 247)
 texture = ExtResource("9_ujvb3")
+flip_h = true
 
 [node name="Sword" type="Sprite2D" parent="."]
-position = Vector2(99, 266)
+position = Vector2(101, 296)
 texture = ExtResource("10_mqclt")
 
 [node name="HammerOne" type="Sprite2D" parent="."]
-position = Vector2(28, 295)
+position = Vector2(31, 328)
 texture = ExtResource("11_3iml8")
 
 [node name="Icon64" type="Sprite2D" parent="."]
@@ -124,10 +125,10 @@ texture = ExtResource("12_mqclt")
 
 [node name="Label3" type="Label" parent="."]
 layout_mode = 0
-offset_left = 87.0
-offset_top = 291.0
-offset_right = 162.0
-offset_bottom = 314.0
+offset_left = 50.0
+offset_top = 322.0
+offset_right = 125.0
+offset_bottom = 345.0
 theme_override_fonts/font = ExtResource("1_xdjxl")
 theme_override_font_sizes/font_size = 12
 text = "and more..."

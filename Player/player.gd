@@ -16,6 +16,7 @@ var iceSpear = preload("res://Player/Attack/ice_spear.tscn")
 var tornado = preload("res://Player/Attack/tornado.tscn")
 var javelin = preload("res://Player/Attack/javelin.tscn")
 var devil_eye = preload("res://Player/Attack/devil_eye.tscn")
+var fire_ball = preload("res://Player/Attack/fire_ball.tscn")
 
 
 
@@ -26,6 +27,7 @@ var devil_eye = preload("res://Player/Attack/devil_eye.tscn")
 @onready var tornadoAttackTimer = get_node("%TornadoAttackTimer")
 @onready var javelinBase = get_node("%JavelinBase")
 @onready var devilEyeBase = get_node("%DevilEyeBase")
+@onready var fireBallTimer = get_node("%FireBallTimer")
 
 #UPGRADES
 var collected_upgrades = []
@@ -54,6 +56,12 @@ var javelin_level = 0
 
 #DevilEye
 var devil_eye_level = 0
+
+#FireBall
+var fire_ball_level = 0
+var fire_ball_attackspeed = 3.0
+var fire_ball_ammo = 0
+var fire_ball_baseammo = 0
 
 #Enemy Related
 var enemy_close = []
@@ -109,7 +117,7 @@ func movement():
 			else:
 				sprite.frame += 1
 			walkTimer.start()
-	
+
 	velocity = mov.normalized()*movement_speed
 	move_and_slide()
 
@@ -126,6 +134,10 @@ func attack():
 		spawn_javelin()
 	if devil_eye_level > 0:
 		spawn_devil_eye()
+	if fire_ball_level > 0:
+		fireBallTimer.wait_time = fire_ball_attackspeed * (1-spell_cooldown)
+		if fireBallTimer.is_stopped():
+			fireBallTimer.start()
 
 func _on_hurt_box_hurt(damage, _angle, _knockback):
 	hp -= clamp(damage-armor, 1.0, 999.0)
@@ -182,7 +194,7 @@ func spawn_javelin():
 	for i in get_javelins:
 		if i.has_method("update_javelin"):
 			i.update_javelin()
-			
+
 func spawn_devil_eye():
 	var get_devil_eye_total = devilEyeBase.get_child_count()
 	if get_devil_eye_total == 0 and devil_eye_level > 0:
@@ -194,7 +206,19 @@ func spawn_devil_eye():
 	for i in get_devil_eyes:
 		if i.has_method("update_devil_eye"):
 			i.update_devil_eye()
-			
+
+func _on_fire_ball_timer_timeout():
+	fire_ball_ammo += fire_ball_baseammo + additional_attacks
+	fire_fire_balls()
+
+func fire_fire_balls():
+	while fire_ball_ammo > 0:
+		var fire_ball_attack = fire_ball.instantiate()
+		fire_ball_attack.global_position = global_position
+		fire_ball_attack.level = fire_ball_level
+		get_tree().current_scene.add_child(fire_ball_attack)
+		fire_ball_ammo -= 1
+
 
 func get_random_target():
 	if enemy_close.size() > 0:
@@ -233,7 +257,7 @@ func calculate_experience(gem_exp):
 	else:
 		experience += collected_experience
 		collected_experience = 0
-	
+
 	set_expbar(experience, exp_required)
 
 func calculate_experiencecap():
@@ -244,9 +268,9 @@ func calculate_experiencecap():
 		exp_cap + 95 * (experience_level-19)*8
 	else:
 		exp_cap = 255 + (experience_level-39)*12
-		
+
 	return exp_cap
-		
+
 func set_expbar(set_value = 1, set_max_value = 100):
 	expBar.value = set_value
 	expBar.max_value = set_max_value
@@ -309,6 +333,18 @@ func upgrade_character(upgrade):
 			devil_eye_level = 3
 		"devil_eye4":
 			devil_eye_level = 4
+		"fire_stick1":
+			fire_ball_level = 1
+			fire_ball_baseammo += 1
+		"fire_stick2":
+			fire_ball_level = 2
+			fire_ball_baseammo += 1
+		"fire_stick3":
+			fire_ball_level = 3
+			fire_ball_attackspeed -= 0.5
+		"fire_stick4":
+			fire_ball_level = 4
+			fire_ball_baseammo += 2
 		"armor1","armor2","armor3","armor4":
 			armor += 1
 		"speed1","speed2","speed3","speed4":
@@ -333,7 +369,7 @@ func upgrade_character(upgrade):
 	levelPanel.position = Vector2(800,50)
 	get_tree().paused = false
 	calculate_experience(0)
-	
+
 func get_random_item():
 	var dblist = []
 	for i in UpgradeDb.UPGRADES:
@@ -403,7 +439,7 @@ func death():
 func _on_btn_menu_click_end():
 	get_tree().paused = false
 	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")
-	
+
 func _process(delta):
 	if Input.is_action_just_pressed("level_up_debug"):
 		levelup()

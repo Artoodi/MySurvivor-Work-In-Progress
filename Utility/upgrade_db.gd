@@ -132,6 +132,38 @@ const UPGRADES = {
 		"prerequisite": ["devil_eye3"],
 		"type": "weapon"
 	},
+		"fire_stick1": {
+		"icon": WEAPON_PATH + "fire_stick.png",
+		"displayname": "Fire Stick",
+		"details": "A magical staff that launches slow but devastating fireballs in random directions",
+		"level": "Level: 1",
+		"prerequisite": [],
+		"type": "weapon"
+	},
+	"fire_stick2": {
+		"icon": WEAPON_PATH + "fire_stick.png",
+		"displayname": "Fire Stick",
+		"details": "Launches an additional fireball with increased speed and damage",
+		"level": "Level: 2",
+		"prerequisite": ["fire_stick1"],
+		"type": "weapon"
+	},
+	"fire_stick3": {
+		"icon": WEAPON_PATH + "fire_stick.png",
+		"displayname": "Fire Stick",
+		"details": "Faster casting speed and longer fireball lifetime",
+		"level": "Level: 3",
+		"prerequisite": ["fire_stick2"],
+		"type": "weapon"
+	},
+	"fire_stick4": {
+		"icon": WEAPON_PATH + "fire_stick.png",
+		"displayname": "Fire Stick",
+		"details": "Launches 2 additional fireballs with maximum damage and explosive power",
+		"level": "Level: 4",
+		"prerequisite": ["fire_stick3"],
+		"type": "weapon"
+	},
 	"armor1": {
 		"icon": ICON_PATH + "helmet_1.png",
 		"displayname": "Armor",

@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://bnu8i05ipkyjn"]
+
+[ext_resource type="Script" uid="uid://bnymox0dxbfiq" path="res://Player/Attack/fire_ball.gd" id="1_lu4lo"]
+[ext_resource type="Texture2D" uid="uid://dphlrv717brly" path="res://Textures/Items/Weapons/fire_ball.png" id="2_4cnif"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hsf5y"]
+atlas = ExtResource("2_4cnif")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xejv"]
+atlas = ExtResource("2_4cnif")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eaoj7"]
+atlas = ExtResource("2_4cnif")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3equ6"]
+atlas = ExtResource("2_4cnif")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxnaq"]
+atlas = ExtResource("2_4cnif")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wg7u5"]
+atlas = ExtResource("2_4cnif")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h32sw"]
+atlas = ExtResource("2_4cnif")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f53t6"]
+atlas = ExtResource("2_4cnif")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ua30c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hsf5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xejv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eaoj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3equ6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxnaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wg7u5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h32sw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f53t6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i3edg"]
+radius = 6.66667
+
+[node name="FireBall" type="Area2D" groups=["attack"]]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_lu4lo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ua30c")
+autoplay = "default"
+frame_progress = 0.418932
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_i3edg")

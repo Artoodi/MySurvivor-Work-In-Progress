@@ -41,7 +41,6 @@ func _ready():
 
 func _physics_process(delta):
 	position += angle * speed * delta
-	scale.x *= -1
 
 func enemy_hit(charge = 1):
 	hp -= charge
