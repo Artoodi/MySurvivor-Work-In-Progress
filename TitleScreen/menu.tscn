@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dcyka5e06knff"]
+[gd_scene load_steps=14 format=3 uid="uid://dcyka5e06knff"]
 
 [ext_resource type="Script" uid="uid://n7ksixhodsid" path="res://TitleScreen/menu.gd" id="1_oi0p3"]
 [ext_resource type="FontFile" uid="uid://cb4e8g30xxp5u" path="res://Font/tenderness.otf" id="1_xdjxl"]
+[ext_resource type="Texture2D" uid="uid://cxy8rr4wjk7lu" path="res://TitleScreen/Background.png" id="2_3iml8"]
 [ext_resource type="PackedScene" uid="uid://b7c7gsdx2rkjm" path="res://Utility/basic_button.tscn" id="3_kwsdd"]
 [ext_resource type="Texture2D" uid="uid://jjt1rh5e2jcp" path="res://Textures/Items/Weapons/ice_spear.png" id="4_0eg15"]
 [ext_resource type="Texture2D" uid="uid://d22bl2j2hb3d1" path="res://Textures/Items/Weapons/javelin_3_new.png" id="5_dsl36"]
@@ -28,16 +29,10 @@ offset_right = 673.0
 offset_bottom = 382.0
 color = Color(0.395457, 0.454173, 0.291202, 1)
 
-[node name="Label2" type="Label" parent="ColorRect"]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 175.0
-offset_right = 151.0
-offset_bottom = 198.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.764706, 0, 0, 0.584314)
-theme_override_fonts/font = ExtResource("1_xdjxl")
-text = "Playble Weapons:"
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(319, 179)
+scale = Vector2(0.420573, 0.359375)
+texture = ExtResource("2_3iml8")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -50,6 +45,17 @@ theme_override_font_sizes/font_size = 62
 text = "My own Survivor"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 175.0
+offset_right = 151.0
+offset_bottom = 198.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.764706, 0, 0, 0.584314)
+theme_override_fonts/font = ExtResource("1_xdjxl")
+text = "Playble Weapons:"
 
 [node name="btn_play" parent="." instance=ExtResource("3_kwsdd")]
 layout_mode = 0

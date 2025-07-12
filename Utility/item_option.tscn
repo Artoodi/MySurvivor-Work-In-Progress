@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://cb4e8g30xxp5u" path="res://Font/tenderness.otf" id="2_wif5r"]
 
 [node name="ItemOption" type="ColorRect"]
-custom_minimum_size = Vector2(180, 50)
+custom_minimum_size = Vector2(180, 70)
 anchors_preset = -1
 anchor_right = 0.281
 anchor_bottom = 0.139
