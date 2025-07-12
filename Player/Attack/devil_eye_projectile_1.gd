@@ -26,21 +26,21 @@ func _ready():
 			attack_size = 1.0 * (1 + player.spell_size)
 		2:
 			hp = 1
-			speed = 220
-			damage = 4
+			speed = 200
+			damage = 3
 			knockback_amount = 50
 			attack_size = 1.0 * (1 + player.spell_size)
 		3:
 			hp = 1
-			speed = 240
-			damage = 5
+			speed = 200
+			damage = 3
 			knockback_amount = 60
 			attack_size = 1.0 * (1 + player.spell_size)
 		4:
-			hp = 2
-			speed = 260
+			hp = 1
+			speed = 300
 			damage = 6
-			knockback_amount = 70
+			knockback_amount = 60
 			attack_size = 1.0 * (1 + player.spell_size)
 
 	var tween = create_tween()
@@ -49,6 +49,7 @@ func _ready():
 
 func _physics_process(delta):
 	position += angle * speed * delta
+	scale.x *= -1
 
 func enemy_hit(charge = 1):
 	hp -= charge

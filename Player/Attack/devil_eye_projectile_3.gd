@@ -19,28 +19,20 @@ func _ready():
 	
 	match level:
 		1:
-			hp = 1
-			speed = 100
-			damage = 12
-			knockback_amount = 120
-			attack_size = 1.0 * (1 + player.spell_size)
+			pass
 		2:
-			hp = 1
-			speed = 110
-			damage = 15
-			knockback_amount = 120
-			attack_size = 1.0 * (1 + player.spell_size)
+			pass
 		3:
 			hp = 2
-			speed = 120
+			speed = 150
 			damage = 18
 			knockback_amount = 130
 			attack_size = 1.0 * (1 + player.spell_size)
 		4:
-			hp = 3
-			speed = 130
-			damage = 22
-			knockback_amount = 150
+			hp = 2
+			speed = 150
+			damage = 30
+			knockback_amount = 130
 			attack_size = 1.0 * (1 + player.spell_size)
 
 	var tween = create_tween()
@@ -49,6 +41,7 @@ func _ready():
 
 func _physics_process(delta):
 	position += angle * speed * delta
+	scale.x *= -1
 
 func enemy_hit(charge = 1):
 	hp -= charge

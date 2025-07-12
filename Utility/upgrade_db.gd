@@ -100,10 +100,10 @@ const UPGRADES = {
 		"prerequisite": ["tornado3"],
 		"type": "weapon"
 	},
-		"devil_eye1": {
+	"devil_eye1": {
 		"icon": WEAPON_PATH + "devil_eye.png",
 		"displayname": "Devil Eye",
-		"details": "A demonic eye that o`rbits around you, firing three different projectiles at enemies, devil eye only effected by cooldown",
+		"details": "A demonic eye that orbits around you, firing fast projectiles at enemies",
 		"level": "Level: 1",
 		"prerequisite": [],
 		"type": "weapon"
@@ -111,7 +111,7 @@ const UPGRADES = {
 	"devil_eye2": {
 		"icon": WEAPON_PATH + "devil_eye.png",
 		"displayname": "Devil Eye",
-		"details": "Faster attack speed and improved projectile damage",
+		"details": "Adds a second medium-speed projectile and faster attack speed",
 		"level": "Level: 2",
 		"prerequisite": ["devil_eye1"],
 		"type": "weapon"
@@ -119,7 +119,7 @@ const UPGRADES = {
 	"devil_eye3": {
 		"icon": WEAPON_PATH + "devil_eye.png",
 		"displayname": "Devil Eye",
-		"details": "Increased orbit radius and speed, faster attacks",
+		"details": "Adds a third slow but powerful projectile, increased orbit radius and speed",
 		"level": "Level: 3",
 		"prerequisite": ["devil_eye2"],
 		"type": "weapon"
@@ -127,7 +127,7 @@ const UPGRADES = {
 	"devil_eye4": {
 		"icon": WEAPON_PATH + "devil_eye.png",
 		"displayname": "Devil Eye",
-		"details": "Maximum power: fastest attacks, larger orbit, and devastating projectiles",
+		"details": "All projectiles deal maximum damage with fastest attack speed and largest orbit",
 		"level": "Level: 4",
 		"prerequisite": ["devil_eye3"],
 		"type": "weapon"

@@ -19,27 +19,23 @@ func _ready():
 	
 	match level:
 		1:
-			hp = 1
-			speed = 150
-			damage = 6
-			knockback_amount = 80
-			attack_size = 1.0 * (1 + player.spell_size)
+			pass
 		2:
 			hp = 1
-			speed = 160
-			damage = 8
+			speed = 200
+			damage = 10
 			knockback_amount = 80
 			attack_size = 1.0 * (1 + player.spell_size)
 		3:
-			hp = 2
-			speed = 170
+			hp = 1
+			speed = 200
 			damage = 10
-			knockback_amount = 90
+			knockback_amount = 80
 			attack_size = 1.0 * (1 + player.spell_size)
 		4:
-			hp = 2
-			speed = 180
-			damage = 12
+			hp = 1
+			speed = 300
+			damage = 15
 			knockback_amount = 100
 			attack_size = 1.0 * (1 + player.spell_size)
 
@@ -49,7 +45,8 @@ func _ready():
 
 func _physics_process(delta):
 	position += angle * speed * delta
-
+	scale.x *= -1
+	
 func enemy_hit(charge = 1):
 	hp -= charge
 	if hp <= 0:

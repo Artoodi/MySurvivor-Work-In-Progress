@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://b73dg4qgts1aw"]
+
+[node name="enemy_demon_little" type="CharacterBody2D"]
