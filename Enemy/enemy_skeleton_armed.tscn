@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b02k2e7nlmkeg"]
+
+[ext_resource type="PackedScene" uid="uid://cbmnfeot0gra8" path="res://Enemy/enemy_skeleton.tscn" id="1_nocrc"]
+[ext_resource type="Texture2D" uid="uid://bsl7o7u1sn6tm" path="res://Textures/Enemy/skeleton_armed.png" id="2_dx33o"]
+
+[node name="enemy_skeleton_armed" instance=ExtResource("1_nocrc")]
+hp = 150
+knockback_recovery = 8.0
+experience = 10
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_dx33o")
+
+[editable path="HurtBox"]
+[editable path="HitBox"]

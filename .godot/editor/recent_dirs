@@ -1,8 +1,10 @@
 res://Enemy
 res://Textures/Enemy
+res://Textures/Player
+res://Player
+res://Player/
 res://Textures/Items/Weapons
 res://Textures/Items/Weapons/devil_eye_projectile
-/Users/hoodhou/MyOwnSurvivor-WIP
 res://Textures/ground
 res://Textures
 res://Font

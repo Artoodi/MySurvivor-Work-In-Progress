@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbmnfeot0gra8"]
+
+[ext_resource type="PackedScene" uid="uid://gvm5jcbbgwdv" path="res://Enemy/enemy_kobold_weak.tscn" id="1_3r7xd"]
+[ext_resource type="Texture2D" uid="uid://bv151gopo1roi" path="res://Textures/Enemy/skeleton.png" id="2_s5ksq"]
+
+[node name="enemy_skeleton" instance=ExtResource("1_3r7xd")]
+movement_speed = 10.0
+hp = 70
+knockback_recovery = 5.0
+experience = 2
+enemy_damage = 2
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_s5ksq")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 0)
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2(0.5, 0.75)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(0.5, 1)
+
+[editable path="HurtBox"]
+[editable path="HitBox"]

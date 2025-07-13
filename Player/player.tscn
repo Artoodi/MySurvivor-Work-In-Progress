@@ -1,7 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://dncgepmkc4jf4"]
+[gd_scene load_steps=17 format=3 uid="uid://dncgepmkc4jf4"]
 
 [ext_resource type="Script" uid="uid://cg0odgx063nbp" path="res://Player/player.gd" id="1_37q80"]
-[ext_resource type="Texture2D" uid="uid://doa3scrwgj2oq" path="res://Textures/Player/player_sprite.png" id="1_jefax"]
 [ext_resource type="PackedScene" uid="uid://xy3cvpwdy828" path="res://Utility/hurt_box.tscn" id="3_gs51i"]
 [ext_resource type="Texture2D" uid="uid://dx7xx6vfahxlq" path="res://Textures/GUI/exp_background.png" id="4_pbpj5"]
 [ext_resource type="Texture2D" uid="uid://dlx33roiu0vlj" path="res://Textures/GUI/exp_progress.png" id="5_5ive2"]
@@ -33,7 +32,6 @@ motion_mode = 1
 script = ExtResource("1_37q80")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_jefax")
 hframes = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]

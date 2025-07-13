@@ -1,9 +1,11 @@
 extends CharacterBody2D
 
+@export var player_data: PlayerData
 
-var movement_speed = 50.0
-var hp = 80
-var maxhp = 80
+var hp: int = 0
+var maxhp: int = 0
+var movement_speed: float = 0.0
+
 var last_movement = Vector2.UP
 var time = 0
 
@@ -17,7 +19,6 @@ var tornado = preload("res://Player/Attack/tornado.tscn")
 var javelin = preload("res://Player/Attack/javelin.tscn")
 var devil_eye = preload("res://Player/Attack/devil_eye.tscn")
 var fire_ball = preload("res://Player/Attack/fire_ball.tscn")
-
 
 
 #AttackNodes
@@ -92,6 +93,21 @@ var enemy_close = []
 signal playerdeath
 
 func _ready():
+	player_data = load("res://Player/Dorsia.tres")
+	if player_data:
+		# 从PlayerData加载基础数据
+		hp = player_data.hp
+		maxhp = player_data.maxhp
+		movement_speed = player_data.movement_speed
+		
+		# 动态设置Sprite2D
+		$Sprite2D.texture = player_data.sprite_texture
+		$Sprite2D.hframes = player_data.h_frames  # 如果有动画帧
+		
+		# 更新健康条等
+		healthBar.max_value = maxhp
+		healthBar.value = hp
+		_on_hurt_box_hurt(0, 0, 0)
 	upgrade_character("icespear1")
 	attack()
 	set_expbar(experience, calculate_experiencecap())
@@ -139,17 +155,20 @@ func attack():
 		if fireBallTimer.is_stopped():
 			fireBallTimer.start()
 
+# 受击
 func _on_hurt_box_hurt(damage, _angle, _knockback):
+	
+	
 	hp -= clamp(damage-armor, 1.0, 999.0)
 	healthBar.max_value = maxhp
 	healthBar.value = hp
 	if hp <= 0:
 		death()
 
+## 武器 ##
 func _on_ice_spear_timer_timeout():
 	icespear_ammo += icespear_baseammo + additional_attacks
 	iceSpearAttackTimer.start()
-
 
 func _on_ice_spear_attack_timer_timeout():
 	if icespear_ammo > 0:
@@ -219,13 +238,11 @@ func fire_fire_balls():
 		get_tree().current_scene.add_child(fire_ball_attack)
 		fire_ball_ammo -= 1
 
-
 func get_random_target():
 	if enemy_close.size() > 0:
 		return enemy_close.pick_random().global_position
 	else:
 		return Vector2.UP
-
 
 func _on_enemy_detection_area_body_entered(body):
 	if not enemy_close.has(body):
@@ -435,11 +452,11 @@ func death():
 		lblResult.text = "You Lose"
 		sndLose.play()
 
-
 func _on_btn_menu_click_end():
 	get_tree().paused = false
 	var _level = get_tree().change_scene_to_file("res://TitleScreen/menu.tscn")
 
+## 调试##
 func _process(delta):
 	if Input.is_action_just_pressed("level_up_debug"):
 		levelup()

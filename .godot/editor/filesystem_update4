@@ -1,4 +1,13 @@
+res://World/world.tscn
 res://Utility/enemy_spawner.gd
 res://Enemy/enemy.gd
-res://World/world.tscn
+res://Player/player.gd
+res://Player/player_data.gd
 res://Enemy/enemy_demon_little.tscn
+res://Player/player.tscn
+res://Enemy/enemy_kobold_strong.tscn
+res://Enemy/enemy_juggernaut.tscn
+res://Enemy/enemy_cyclops.tscn
+res://Player/Dorsia.tres
+res://Enemy/enemy_skeleton.tscn
+res://Enemy/enemy_skeleton_armed.tscn

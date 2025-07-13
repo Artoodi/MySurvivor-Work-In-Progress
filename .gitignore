@@ -1,0 +1,64 @@
+# Godot 4+ specific ignores
+.godot/
+*.gd.uid
+
+# Godot-specific ignores
+.import/
+*.import
+export.cfg
+export_presets.cfg
+
+# Mono/C# specific ignores (if using C# in Godot)
+.mono/
+*.pidb
+*.userprefs
+**/mono_crash.*.json
+
+# Exported game builds
+export/
+build/
+bin/
+
+# Temporary and backup files
+*~
+*.tmp
+*.bak
+*.swp
+
+# System/OS-specific files
+.DS_Store
+.Apple*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editor/IDE specific
+.vscode/
+.idea/
+*.sln
+*.csproj
+*.user
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Packages and dependencies (if using external tools)
+addons/*/node_modules/
+addons/*/.git/
+
+# Other common ignores
+node_modules/
+bower_components/
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledApps
+/.npm-global
+/.node_repl_history
+*.tgz
+.yarn-integrity
+
+# Ignore user-specific Godot editor settings if any
+project.godot.bak
