@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=3 format=3 uid="uid://dlb4ok0s32q3f"]
+
+[ext_resource type="Script" uid="uid://royiu4u5dnt8" path="res://Player/player_data.gd" id="1_efae4"]
+[ext_resource type="Texture2D" uid="uid://brgas0m7461ob" path="res://Textures/Player/maltheron_sprite.png" id="2_opdy1"]
+
+[resource]
+script = ExtResource("1_efae4")
+display_name = "Default Player"
+hp = 50
+maxhp = 50
+movement_speed = 45.0
+sprite_texture = ExtResource("2_opdy1")
+h_frames = 2
+armor = 0
+speed = 0
+spell_cooldown = 0.5
+spell_size = -0.5
+additional_attacks = 0
+metadata/_custom_type_script = "uid://royiu4u5dnt8"

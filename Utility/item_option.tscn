@@ -28,6 +28,7 @@ offset_right = 32.0
 offset_bottom = 32.0
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("1_583l0")
+expand_mode = 1
 
 [node name="lbl_name" type="Label" parent="."]
 layout_mode = 0

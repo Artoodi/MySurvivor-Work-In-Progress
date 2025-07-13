@@ -11,3 +11,11 @@ res://Enemy/enemy_cyclops.tscn
 res://Player/Dorsia.tres
 res://Enemy/enemy_skeleton.tscn
 res://Enemy/enemy_skeleton_armed.tscn
+res://Enemy/enemy_kobold_weak.tscn
+res://TitleScreen/menu.tscn
+res://Player/Attack/devil_eye.tscn
+res://Utility/item_option.tscn
+res://Player/GUI/item_container.tscn
+res://Utility/upgrade_db.tscn
+res://Player/Maltheron.tres
+res://Player/CharacterData/Maltheron.tres

@@ -5,6 +5,11 @@ extends CharacterBody2D
 var hp: int = 0
 var maxhp: int = 0
 var movement_speed: float = 0.0
+var armor: float = 0.0
+var speed:float = 0.0
+var spell_cooldown:float = 0.0
+var spell_size:float = 0.0
+var additional_attacks:float = 0.0
 
 var last_movement = Vector2.UP
 var time = 0
@@ -33,11 +38,7 @@ var fire_ball = preload("res://Player/Attack/fire_ball.tscn")
 #UPGRADES
 var collected_upgrades = []
 var upgrade_options = []
-var armor = 0
-var speed = 0
-var spell_cooldown = 0
-var spell_size = 0
-var additional_attacks = 0
+
 
 #IceSpear
 var icespear_ammo = 0
@@ -93,12 +94,17 @@ var enemy_close = []
 signal playerdeath
 
 func _ready():
-	player_data = load("res://Player/Dorsia.tres")
+	player_data = load("res://Player/CharacterData/Maltheron.tres")
 	if player_data:
 		# 从PlayerData加载基础数据
 		hp = player_data.hp
 		maxhp = player_data.maxhp
 		movement_speed = player_data.movement_speed
+		armor = player_data.armor
+		speed = player_data.speed
+		spell_cooldown = player_data.spell_cooldown
+		spell_size = player_data.spell_size
+		additional_attacks = player_data.additional_attacks
 		
 		# 动态设置Sprite2D
 		$Sprite2D.texture = player_data.sprite_texture
@@ -238,6 +244,7 @@ func fire_fire_balls():
 		get_tree().current_scene.add_child(fire_ball_attack)
 		fire_ball_ammo -= 1
 
+#获取武器
 func get_random_target():
 	if enemy_close.size() > 0:
 		return enemy_close.pick_random().global_position
@@ -252,7 +259,7 @@ func _on_enemy_detection_area_body_exited(body):
 	if enemy_close.has(body):
 		enemy_close.erase(body)
 
-
+#拾取范围
 func _on_grab_area_area_entered(area):
 	if area.is_in_group("loot"):
 		area.target = self

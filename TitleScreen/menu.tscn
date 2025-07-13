@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d22bl2j2hb3d1" path="res://Textures/Items/Weapons/javelin_3_new.png" id="5_dsl36"]
 [ext_resource type="Texture2D" uid="uid://c5y0r4crcqjdp" path="res://Textures/Items/Weapons/tornado.png" id="6_6q26e"]
 [ext_resource type="Texture2D" uid="uid://f3cn25ccer2i" path="res://Textures/Items/Weapons/amulet.png" id="7_3iml8"]
-[ext_resource type="Texture2D" uid="uid://btklqfi1n5tyt" path="res://Textures/Items/Weapons/devil_eye.png" id="8_fmhqy"]
+[ext_resource type="Texture2D" uid="uid://cnhjqk4wa3giw" path="res://Textures/Items/Weapons/devil_eye.png" id="8_fmhqy"]
 [ext_resource type="Texture2D" uid="uid://yugqg4cbsprx" path="res://Textures/Items/Weapons/fire_stick.png" id="9_ujvb3"]
 [ext_resource type="Texture2D" uid="uid://bu2son8g2konp" path="res://Textures/Items/Weapons/sword.png" id="10_mqclt"]
 [ext_resource type="Texture2D" uid="uid://bp3mrh4ikgdci" path="res://Textures/Items/Weapons/Hammer_one.png" id="11_3iml8"]
@@ -101,7 +101,8 @@ position = Vector2(29, 296)
 texture = ExtResource("7_3iml8")
 
 [node name="DevilEye" type="Sprite2D" parent="."]
-position = Vector2(72, 247)
+position = Vector2(77, 249)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("8_fmhqy")
 
 [node name="FireStick" type="Sprite2D" parent="."]

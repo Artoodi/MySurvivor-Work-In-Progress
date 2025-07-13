@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqr8jvhqicd3h"]
 
-[ext_resource type="Texture2D" uid="uid://btklqfi1n5tyt" path="res://Textures/Items/Weapons/devil_eye.png" id="1_8gcii"]
+[ext_resource type="Texture2D" uid="uid://cnhjqk4wa3giw" path="res://Textures/Items/Weapons/devil_eye.png" id="1_8gcii"]
 [ext_resource type="Script" uid="uid://b0eiss013rxl1" path="res://Player/Attack/devil_eye.gd" id="1_x5kmc"]
 
 [node name="DevilEye" type="Node2D"]
 script = ExtResource("1_x5kmc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_8gcii")
 
 [node name="AttackTimer" type="Timer" parent="."]

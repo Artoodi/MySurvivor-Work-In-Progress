@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=3 format=3 uid="uid://dps5vvvqoohsj"]
+
+[ext_resource type="Script" uid="uid://royiu4u5dnt8" path="res://Player/player_data.gd" id="1_rcvnm"]
+[ext_resource type="Texture2D" uid="uid://doa3scrwgj2oq" path="res://Textures/Player/dorsia_sprite.png" id="2_qtls1"]
+
+[resource]
+script = ExtResource("1_rcvnm")
+display_name = "Dorsia"
+hp = 80
+max_hp = 80
+movement_speed = 50.0
+sprite_texture = ExtResource("2_qtls1")
+h_frames = 2

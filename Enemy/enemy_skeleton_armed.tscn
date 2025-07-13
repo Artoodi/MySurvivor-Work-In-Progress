@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bsl7o7u1sn6tm" path="res://Textures/Enemy/skeleton_armed.png" id="2_dx33o"]
 
 [node name="enemy_skeleton_armed" instance=ExtResource("1_nocrc")]
+scale = Vector2(1.47666, 1.5)
 hp = 150
 knockback_recovery = 8.0
 experience = 10
