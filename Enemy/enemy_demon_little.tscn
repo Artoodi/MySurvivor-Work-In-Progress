@@ -1,3 +1,24 @@
-[gd_scene format=3 uid="uid://b73dg4qgts1aw"]
+[gd_scene load_steps=3 format=3 uid="uid://cvsnbqchuful2"]
 
-[node name="enemy_demon_little" type="CharacterBody2D"]
+[ext_resource type="PackedScene" uid="uid://gvm5jcbbgwdv" path="res://Enemy/enemy_kobold_weak.tscn" id="1_mgsln"]
+[ext_resource type="Texture2D" uid="uid://buqjr88yoas08" path="res://Textures/Enemy/demon_little.png" id="2_70ckj"]
+
+[node name="enemy_demon_little" instance=ExtResource("1_mgsln")]
+movement_speed = 50.0
+hp = 5
+knockback_recovery = 5.0
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_70ckj")
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 2)
+
+[node name="CollisionShape2D" parent="HurtBox" index="0"]
+position = Vector2(-1, 1)
+
+[node name="CollisionShape2D" parent="HitBox" index="0"]
+position = Vector2(-0.5, 1.5)
+
+[editable path="HurtBox"]
+[editable path="HitBox"]
