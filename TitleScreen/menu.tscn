@@ -30,8 +30,8 @@ offset_bottom = 382.0
 color = Color(0.395457, 0.454173, 0.291202, 1)
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(323, 181)
-scale = Vector2(0.420573, 0.359375)
+position = Vector2(325.5, 183.5)
+scale = Vector2(0.423828, 0.364258)
 texture = ExtResource("2_3iml8")
 
 [node name="Label" type="Label" parent="."]

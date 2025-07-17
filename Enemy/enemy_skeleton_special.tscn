@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://hhoy4byew233"]
+
+[ext_resource type="PackedScene" uid="uid://cbmnfeot0gra8" path="res://Enemy/enemy_skeleton.tscn" id="1_slyem"]
+[ext_resource type="Texture2D" uid="uid://bkgkio3uw54no" path="res://Textures/Enemy/skeleton_special.png" id="2_w6vof"]
+
+[node name="enemy_skeleton_special" instance=ExtResource("1_slyem")]
+movement_speed = 80.0
+hp = 1
+knockback_recovery = 0.0
+experience = 1
+enemy_damage = 1
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_w6vof")
+
+[editable path="HurtBox"]
+[editable path="HitBox"]
