@@ -2,6 +2,8 @@
 .godot/
 *.gd.uid
 *.exe
+*.pck
+*.zip
 
 # Godot-specific ignores
 .import/
