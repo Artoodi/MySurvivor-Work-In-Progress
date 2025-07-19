@@ -1,6 +1,6 @@
 # MySurvivor
 
-**MySurvivor** is a 2D top-down survival shooter demo game inspired by *Vampire Survivors*, developed entirely by myself using the **Godot Engine**. The game features pixel-art visuals, procedurally spawning enemies, automatic attacks, leveling mechanics, and scalable weapon systems. This project was created to enhance my understanding of gameplay architecture, game loop design, and engine-based development.
+**MySurvivor** is a 2D top-down survival shooter demo game inspired by *Vampire Survivors*, developed using the **Godot Engine**. The game features pixel-art visuals, procedurally spawning enemies, automatic attacks, leveling mechanics, and scalable weapon systems. This project was created to enhance my understanding of gameplay architecture, game loop design, and engine-based development.
 
 ---
 
