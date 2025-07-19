@@ -18,8 +18,8 @@ config/icon="uid://jpxxx4vea6fa"
 
 [autoload]
 
-Global="*res://Utility/Global.gd"
 UpgradeDb="*res://Utility/upgrade_db.tscn"
+Global="*res://Utility/global.gd"
 
 [display]
 
