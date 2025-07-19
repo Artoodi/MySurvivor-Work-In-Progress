@@ -16,6 +16,7 @@ In *MySurvivor*, the player must survive waves of enemies, defeat them to collec
 - Enemy spawning system with basic AI pursuit behavior
 - Modular weapon system (scalable and easy to extend)
 - XP collection, leveling system, and character progression
+- Different characters, you can select character from selector
 - Custom-made pixel-art graphics (32x32 style)
 - Test levels for balance tuning and system debugging
 - Script modularization with signal/event-based architecture
