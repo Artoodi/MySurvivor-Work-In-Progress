@@ -94,7 +94,8 @@ var enemy_close = []
 signal playerdeath
 
 func _ready():
-	player_data = load("res://Player/CharacterData/Maltheron.tres")
+	var data_path = Global.get_selected_character_path()
+	var player_data = load(data_path)
 	if player_data:
 		# 从PlayerData加载基础数据
 		hp = player_data.hp

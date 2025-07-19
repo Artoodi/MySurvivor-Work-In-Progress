@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3pfr2u8vd062"]
+
+[ext_resource type="Texture2D" uid="uid://dygsjw1w28eic" path="res://Textures/Player/dorsia_sprite.png" id="1_8whut"]
+[ext_resource type="Script" uid="uid://bo7ogutga6tln" path="res://Utility/character_selector.gd" id="1_slxqu"]
+[ext_resource type="Texture2D" uid="uid://qj0ekbkou48s" path="res://Textures/Player/maltheron_sprite.png" id="2_slxqu"]
+[ext_resource type="PackedScene" uid="uid://b7c7gsdx2rkjm" path="res://Utility/basic_button.tscn" id="4_yt64o"]
+
+[node name="CharacterSelector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_slxqu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 684.0
+offset_bottom = 378.0
+color = Color(0.363216, 0.277974, 0.344999, 1)
+
+[node name="DorsiaSprite" type="Sprite2D" parent="."]
+position = Vector2(124, 81)
+texture = ExtResource("1_8whut")
+hframes = 2
+
+[node name="MaltheronSprite" type="Sprite2D" parent="."]
+position = Vector2(292, 84)
+texture = ExtResource("2_slxqu")
+hframes = 2
+
+[node name="Btn_Dorsia" parent="." instance=ExtResource("4_yt64o")]
+custom_minimum_size = Vector2(90, 30)
+layout_mode = 0
+offset_left = 80.0
+offset_top = 106.0
+offset_right = 170.0
+offset_bottom = 136.0
+text = "Dorsia
+"
+
+[node name="Btn_Maltheron" parent="." instance=ExtResource("4_yt64o")]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 106.0
+offset_right = 340.0
+offset_bottom = 136.0
+text = "Maltheron"
